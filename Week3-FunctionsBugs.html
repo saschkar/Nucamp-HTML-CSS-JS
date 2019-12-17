@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body onload="check_user_credentials()" style="position:absolute">
+    <h1> Spiritueux Wines and Liquors </h1>
+        <script>
+            function check_user_credentials(){
+                if (age_of_user() < 18)
+                    alert("You are too young to buy alcohol.");
+                if (email_of_user() === "")
+                    alert("Your email is not valid")
+            }
+
+            function age_of_user(){
+                var age = prompt("What is your age?")
+                return age;
+            }
+
+            function email_of_user(){
+                var email = prompt("What is your email address?")
+                if (email.indexOf("@") != -1)
+                    return email;
+                else return "";
+            }
+        </script>
+</body>
+</html>

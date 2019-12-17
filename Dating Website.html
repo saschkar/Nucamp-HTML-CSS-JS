@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dating Website</title>
+        <meta name="author" content="Sheldon Aschkar">
+        <style>
+            .field {background:white; 
+                    border:2px solid purple;
+                    margin-bottom:10px;
+                    width:360px;
+                    border-radius:5px;
+                    margin: 0 auto}
+            .label {text-align:right;
+                    vertical-align:top;
+                    width:180px;
+                    font-weight:bold;
+                    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+            .check {width:auto}
+            .range {text-align:center;}   
+            label:hover {font-size:24px}
+            input:hover {font-size:24px}
+            img {width:20%}
+            .left {display:inline-block;
+                    text-align:center;
+                    vertical-align:top;
+                    width:60px;}
+            .right {display:inline-block;
+                    text-align:center;
+                    vertical-align:top;
+                    width:60px}
+            .leg {background:purple;
+                  border-radius:5px;
+                  color:white;
+                  width:auto;
+                  height:25px;
+                  text-align:center;
+                  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                  font-size:20}
+            .input {width:100%}
+            .h1 {text-align:center;
+                 color:white;}
+            .back {background:blue}
+            .div {text-align:center;
+                  color:white;
+                  background:blue}
+            .button {width:25%;
+                     border-radius:5px;
+                     color:white;}
+            
+        </style>
+    </head>
+    <body class="back">
+        <h1 class="h1">Please Enter Your Details For Our Dating Website!</h1>
+        <form>
+        <fieldset class="field">
+            <legend class="leg">Your Face</legend>
+            <label for="avatar" class="label">Your Image:</label><br>
+            <input type="file" name="avatar" id="avatar"><br><br>
+            <label for="preview" class="label">Image Preview:</label>
+            <img id="preview" name="preview">
+        </fieldset><br>
+        <fieldset class="field">
+            <legend class="leg">Your General Details</legend>
+            <label for="name" class="label">Name:</label>
+            <input type="text" class="input" name="name" id="name"><br>
+            <label for="gender" class="label">Gender:</label>
+            <input type="radio" class="check" name="gender" id="male" required> Male
+            <input type="radio" class="check" name="gender" id="female" required> Female <br>
+            <label for="age" class="label">Age:</label>
+            <input type="number" class="input" name="age" id="age" min="0" max="99" required><br>
+            <label for="dob" class="label">DOB:</label>
+            <input type="date" class="input" name="dob" id="dob"><br>
+            <label for="color" class="label">Favorite Color:</label>
+            <input type="color" name="color" id="color"><br>
+            <label for="country" class="label">Which Country:</label>
+                <select name="country" id="country">
+                    <option value="ns">No Selection</option>
+                    <option value="usa">United States</option>
+                    <option value="Ch">China</option>
+                    <option value="Mex">Mexico</option>
+                    <option value="Can">Canada</option>
+                    <option value="Sp">Spain</option>
+                </select>
+        </fieldset><br>
+        <fieldset class="field">
+            <legend class="leg">Your Indicators</legend>
+            <label for="height" class="label">Height:</label>
+            <span class="left">Short</span><input type="range" min="0" max="100" value="50" name="height" id="height" class="range"><span class="right">Tall</span><br>
+            <label for="salary" class="label">Salary:</label>
+            <span class="left">Poor</span><input type="range" min="0" max="100" value="50" name="salary" id="salary" class="range"><span class="right">Rich</span><br>
+        </fieldset><br>
+        <fieldset class="field">
+            <legend class="leg">Your Contact Information</legend>
+            <label for="email" class="label">Email:</label><br>
+            <input type="email" class="input" name="email" id="email" required><br>
+            <label for="number" class="label">Mobile:</label><br>
+            <input type="tel" class="input" name="mobile" id="mobile"><br>
+            <label for="address" class="label">Address:</label><br>
+            <textarea name="address" class="input" id="address" cols="20" rows="3"></textarea><br>
+            <label for="contact">Method of Contact:</label>
+            <input type="checkbox" name="email" id="email" class="check">Email
+            <input type="checkbox" name="whatsapp" id="whatsapp" class="check">Whatsapp
+            <input type="checkbox" name="chat" id="chat" class="check">In App Chat
+        </fieldset><br>
+        <div class="div"><input class="button" type="submit" value="Submit"></div>        
+    </form>
+    <script src="https://url.nucamp.co/datingjs"></script>
+    </body>
+</html>
